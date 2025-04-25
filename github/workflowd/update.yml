@@ -12,7 +12,7 @@ jobs:
       
      - name: Update Matches Data
   run: |
-    #  GET https://api.football-data.org/v4/matches
+    #  GET 8d831470f41e4dbe983fba512cc0c795
     echo '[{"home_team":"الاتحاد","away_team":"الشباب","date":"2023-10-16","time":"21:00"}]' > matches.json
           
       - name: Commit Changes
