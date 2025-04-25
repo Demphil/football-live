@@ -57,3 +57,11 @@ body {
     font-weight: bold;
     margin-top: 5px;
 }
+.live-btn {
+       background: #d10a11;
+       color: white;
+       padding: 10px 20px;
+       border-radius: 5px;
+       display: inline-block;
+       margin: 10px 0;
+   }
