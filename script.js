@@ -141,3 +141,6 @@ if (typeof module !== 'undefined' && module.exports) {
     updateMemoryUsage
   };
 }
+document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+    document.querySelector('.main-nav').classList.toggle('active');
+});
