@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Update Data
-        run: |
-          # أضف هنا كود جلب البيانات من API
-          echo "Updated at $(date)" > last-update.txt
+     - name: Update Matches Data
+  run: |
+    # استبدل هذا الكود بجلب بيانات حقيقية من API
+    echo '[{"home_team":"الاتحاد","away_team":"الشباب","date":"2023-10-16","time":"21:00"}]' > matches.json
           
       - name: Commit Changes
         run: |
