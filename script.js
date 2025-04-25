@@ -14,3 +14,15 @@ function displayMatches(matches) {
 }
 
 fetchMatches().then(displayMatches);
+fetch('matches.json')
+    .then(response => response.json())
+    .then(matches => {
+        const container = document.getElementById('matches');
+        container.innerHTML = matches.map(match => 
+            <div class="match">
+                <h3>${match.home_team} vs ${match.away_team}</h3>
+                <p>التاريخ: ${match.date}</p>
+                <p>الوقت: ${match.time}</p>
+            </div>
+        ).join('');
+    });
