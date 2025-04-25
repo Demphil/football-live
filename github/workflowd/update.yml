@@ -1,0 +1,24 @@
+name: Update Matches
+on:
+  schedule:
+    - cron: '0 12 * * *'  # يومياً الساعة 12 ظهراً
+  workflow_dispatch:       # يسمح بالتشغيل اليدوي
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Update Data
+        run: |
+          # أضف هنا كود جلب البيانات من API
+          echo "Updated at $(date)" > last-update.txt
+          
+      - name: Commit Changes
+        run: |
+          git config --global user.name "GitHub Bot"
+          git config --global user.email "bot@example.com"
+          git add .
+          git commit -m "Auto-update matches data"
+          git push
